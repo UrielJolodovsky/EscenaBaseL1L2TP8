@@ -28,7 +28,7 @@ public class CollisionsWithNPC : MonoBehaviour
         if (NPCDialogueScripts)
         {
             UIElements.SetActive(true);
-            // NPCDialogue = NPCDialogueScripts.data.dialogueLines;
+            NPCDialogue = NPCDialogueScripts.data.dialogueLines;
             ShowNextDialogueLine();
         }
     }
