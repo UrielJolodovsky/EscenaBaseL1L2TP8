@@ -913,9 +913,9 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494190472}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 1.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -990,7 +990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4b74722a89a12a42a9c4fabc632d1be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: 3de0d431d951e9c4097e7a2efc0a743c, type: 2}
 --- !u!1 &567270561
 GameObject:
   m_ObjectHideFlags: 0
@@ -12857,7 +12857,7 @@ MonoBehaviour:
   UIElements: {fileID: 462308688}
   dialogueTxt: {fileID: 419578143}
   NPCDialogue: []
-  NPCDialogueScripts: {fileID: 0}
+  NPCDialogueScripts: {fileID: 494190477}
 --- !u!1 &1986718824
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7ce56702867c3f4d930594576f96876, type: 3}
   m_Name: CapsuleNPCData
   m_EditorClassIdentifier: 
-  dialogueLines: []
+  dialogueLines:
+  - Hola!
+  - "\xBFComo est\xE1s?"
+  - Bienvenido a la hora del "recreo"
