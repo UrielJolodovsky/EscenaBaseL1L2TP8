@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,9 +123,10 @@ GameObject:
   - component: {fileID: 38498595}
   - component: {fileID: 38498597}
   - component: {fileID: 38498596}
-  m_Layer: 0
+  - component: {fileID: 38498598}
+  m_Layer: 10
   m_Name: MesaLab.001 (1)
-  m_TagString: Untagged
+  m_TagString: mesa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,6 +191,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38498594}
   m_Mesh: {fileID: 4300036, guid: eda073de62a6d1243873507b1bffeaac, type: 3}
+--- !u!136 &38498598
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38498594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 0.85
+  m_Direction: 1
+  m_Center: {x: -0.3060403, y: 0.42350835, z: -0.47273153}
 --- !u!1 &86514349
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,9 +720,9 @@ GameObject:
   - component: {fileID: 453356078}
   - component: {fileID: 453356080}
   - component: {fileID: 453356079}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mouse3
-  m_TagString: Untagged
+  m_TagString: Mouse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -743,7 +758,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c89b188494e953f48bca154d7ed375ef, type: 2}
+  - {fileID: 2100000, guid: 8822d95fa340bc0439f3b66b1cca5921, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -782,9 +797,9 @@ GameObject:
   - component: {fileID: 461018154}
   - component: {fileID: 461018156}
   - component: {fileID: 461018155}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Mouse2
-  m_TagString: Untagged
+  m_TagString: Mouse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -820,7 +835,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c89b188494e953f48bca154d7ed375ef, type: 2}
+  - {fileID: 2100000, guid: 176b9eb682969f94b8c5527c6a432caf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1216,9 +1231,9 @@ GameObject:
   - component: {fileID: 796748864}
   - component: {fileID: 796748866}
   - component: {fileID: 796748865}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Teclado2
-  m_TagString: Untagged
+  m_TagString: Teclado
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1254,7 +1269,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dbee9a92da73f8945bd7a5d16e9763bd, type: 2}
+  - {fileID: 2100000, guid: 5f557b3c14cd92b4797180ca104a76be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3672,7 +3687,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9ac8fa434d7a7d48b5c59d77fa29628, type: 2}
+  - {fileID: 2100000, guid: 176b9eb682969f94b8c5527c6a432caf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3709,7 +3724,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c89b188494e953f48bca154d7ed375ef, type: 2}
+  - {fileID: 2100000, guid: 5f557b3c14cd92b4797180ca104a76be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6469,7 +6484,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dbee9a92da73f8945bd7a5d16e9763bd, type: 2}
+  - {fileID: 2100000, guid: 8822d95fa340bc0439f3b66b1cca5921, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8004,13 +8019,28 @@ GameObject:
   - component: {fileID: 1107075293}
   - component: {fileID: 1103683763}
   - component: {fileID: 1104782067}
-  m_Layer: 0
+  - component: {fileID: 1106984126}
+  m_Layer: 9
   m_Name: MesaLab.001
-  m_TagString: Untagged
+  m_TagString: mesa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!136 &1106984126
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106984125}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 0.85
+  m_Direction: 1
+  m_Center: {x: -0.3060403, y: 0.42350835, z: -0.47273153}
 --- !u!1 &1106984127
 GameObject:
   m_ObjectHideFlags: 0
@@ -9266,9 +9296,9 @@ GameObject:
   - component: {fileID: 1107075203}
   - component: {fileID: 1103683937}
   - component: {fileID: 1104781985}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Monitor1
-  m_TagString: Untagged
+  m_TagString: Monitor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9384,9 +9414,9 @@ GameObject:
   - component: {fileID: 1107075213}
   - component: {fileID: 1103683939}
   - component: {fileID: 1104781987}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mouse1
-  m_TagString: Untagged
+  m_TagString: Mouse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9645,9 +9675,9 @@ GameObject:
   - component: {fileID: 1107075333}
   - component: {fileID: 1103683867}
   - component: {fileID: 1104782171}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Teclado1
-  m_TagString: Untagged
+  m_TagString: Teclado
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12221,9 +12251,9 @@ GameObject:
   - component: {fileID: 1618619823}
   - component: {fileID: 1618619825}
   - component: {fileID: 1618619824}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Monitor2
-  m_TagString: Untagged
+  m_TagString: Monitor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12259,7 +12289,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9ac8fa434d7a7d48b5c59d77fa29628, type: 2}
+  - {fileID: 2100000, guid: 8822d95fa340bc0439f3b66b1cca5921, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12462,9 +12492,10 @@ GameObject:
   - component: {fileID: 1840157378}
   - component: {fileID: 1840157380}
   - component: {fileID: 1840157379}
-  m_Layer: 0
+  - component: {fileID: 1840157381}
+  m_Layer: 11
   m_Name: MesaLab.001 (2)
-  m_TagString: Untagged
+  m_TagString: mesa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12529,6 +12560,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840157377}
   m_Mesh: {fileID: 4300036, guid: eda073de62a6d1243873507b1bffeaac, type: 3}
+--- !u!136 &1840157381
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840157377}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 0.85
+  m_Direction: 1
+  m_Center: {x: -0.3060403, y: 0.42350835, z: -0.47273153}
 --- !u!1 &1858235526
 GameObject:
   m_ObjectHideFlags: 0
@@ -12869,6 +12914,21 @@ MonoBehaviour:
   dialogueTxt: {fileID: 419578143}
   NPCDialogue: []
   NPCDialogueScripts: {fileID: 0}
+--- !u!114 &1929154866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929154864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 151b84f5cded016479e8c2131798a7cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementoAgarrado: {fileID: 0}
+  Agarrado: 0
+  Jugador: {fileID: 1929154864}
 --- !u!1 &1986718824
 GameObject:
   m_ObjectHideFlags: 0
@@ -12991,9 +13051,9 @@ GameObject:
   - component: {fileID: 2041691583}
   - component: {fileID: 2041691585}
   - component: {fileID: 2041691584}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Monitor3
-  m_TagString: Untagged
+  m_TagString: Monitor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13029,7 +13089,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b9ac8fa434d7a7d48b5c59d77fa29628, type: 2}
+  - {fileID: 2100000, guid: 5f557b3c14cd92b4797180ca104a76be, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13068,9 +13128,9 @@ GameObject:
   - component: {fileID: 2072020984}
   - component: {fileID: 2072020986}
   - component: {fileID: 2072020985}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Teclado3
-  m_TagString: Untagged
+  m_TagString: Teclado
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13106,7 +13166,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dbee9a92da73f8945bd7a5d16e9763bd, type: 2}
+  - {fileID: 2100000, guid: 176b9eb682969f94b8c5527c6a432caf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

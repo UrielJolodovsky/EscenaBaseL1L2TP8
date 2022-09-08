@@ -7,6 +7,9 @@ TagManager:
   - Silla
   - mesa
   - NPC
+  - Monitor
+  - Teclado
+  - Mouse
   layers:
   - Default
   - TransparentFX
@@ -17,9 +20,9 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
+  - Componentes1
+  - Componentes2
+  - Componentes3
   - 
   - 
   - 
