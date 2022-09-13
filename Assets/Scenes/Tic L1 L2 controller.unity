@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -720,6 +720,7 @@ GameObject:
   - component: {fileID: 453356078}
   - component: {fileID: 453356080}
   - component: {fileID: 453356079}
+  - component: {fileID: 453356081}
   m_Layer: 11
   m_Name: Mouse3
   m_TagString: Mouse
@@ -735,7 +736,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453356077}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.457, y: -0.29, z: -3.156}
+  m_LocalPosition: {x: -0.918, y: -0.29, z: -3.156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1345199851}
@@ -786,6 +787,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 453356077}
   m_Mesh: {fileID: 4300038, guid: eda073de62a6d1243873507b1bffeaac, type: 3}
+--- !u!136 &453356081
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453356077}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 0.03249007
+  m_Direction: 1
+  m_Center: {x: 0.0026450176, y: 0.0047273007, z: -1.944e-42}
 --- !u!1 &461018153
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,6 +812,7 @@ GameObject:
   - component: {fileID: 461018154}
   - component: {fileID: 461018156}
   - component: {fileID: 461018155}
+  - component: {fileID: 461018157}
   m_Layer: 10
   m_Name: Mouse2
   m_TagString: Mouse
@@ -812,7 +828,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461018153}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.457, y: -0.29, z: -4.759}
+  m_LocalPosition: {x: 0.739, y: -0.29, z: -4.759}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1345199851}
@@ -863,6 +879,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 461018153}
   m_Mesh: {fileID: 4300038, guid: eda073de62a6d1243873507b1bffeaac, type: 3}
+--- !u!136 &461018157
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461018153}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 0.03249007
+  m_Direction: 1
+  m_Center: {x: 0.0026450176, y: 0.0047273007, z: -1.944e-42}
 --- !u!1 &462308688
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,6 +930,83 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &493696671
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493696672}
+  - component: {fileID: 493696674}
+  - component: {fileID: 493696673}
+  m_Layer: 5
+  m_Name: agarrarComponente
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &493696672
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493696671}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 567270565}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -9, y: -263}
+  m_SizeDelta: {x: 352.0006, y: 141.22864}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &493696673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493696671}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Apretar E para agarrar el componente
+--- !u!222 &493696674
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493696671}
+  m_CullTransparentMesh: 0
 --- !u!1 &494190472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,6 +1204,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 462308689}
+  - {fileID: 493696672}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1231,6 +1339,7 @@ GameObject:
   - component: {fileID: 796748864}
   - component: {fileID: 796748866}
   - component: {fileID: 796748865}
+  - component: {fileID: 796748867}
   m_Layer: 10
   m_Name: Teclado2
   m_TagString: Teclado
@@ -1246,7 +1355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796748863}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.484, y: -0.3, z: -5.111}
+  m_LocalPosition: {x: -0.319, y: -0.3, z: -5.111}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1345199851}
@@ -1297,6 +1406,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 796748863}
   m_Mesh: {fileID: 4300072, guid: eda073de62a6d1243873507b1bffeaac, type: 3}
+--- !u!136 &796748867
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 796748863}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.22516136
+  m_Height: 0.026489537
+  m_Direction: 1
+  m_Center: {x: 0.00042207912, y: 0.005143194, z: -0.019066185}
 --- !u!1 &843151793
 GameObject:
   m_ObjectHideFlags: 0
@@ -9296,6 +9419,7 @@ GameObject:
   - component: {fileID: 1107075203}
   - component: {fileID: 1103683937}
   - component: {fileID: 1104781985}
+  - component: {fileID: 1106984292}
   m_Layer: 9
   m_Name: Monitor1
   m_TagString: Monitor
@@ -9303,6 +9427,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!136 &1106984292
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106984291}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 0.49200004
+  m_Direction: 1
+  m_Center: {x: 0.02926142, y: 0.018688463, z: -0.0014301687}
 --- !u!1 &1106984293
 GameObject:
   m_ObjectHideFlags: 0
@@ -9414,6 +9552,7 @@ GameObject:
   - component: {fileID: 1107075213}
   - component: {fileID: 1103683939}
   - component: {fileID: 1104781987}
+  - component: {fileID: 1106984302}
   m_Layer: 9
   m_Name: Mouse1
   m_TagString: Mouse
@@ -9421,6 +9560,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!136 &1106984302
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106984301}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 0.03249007
+  m_Direction: 1
+  m_Center: {x: 0.0026450176, y: 0.0047273007, z: -1.944e-42}
 --- !u!1 &1106984303
 GameObject:
   m_ObjectHideFlags: 0
@@ -9675,6 +9828,7 @@ GameObject:
   - component: {fileID: 1107075333}
   - component: {fileID: 1103683867}
   - component: {fileID: 1104782171}
+  - component: {fileID: 1106984422}
   m_Layer: 9
   m_Name: Teclado1
   m_TagString: Teclado
@@ -9682,6 +9836,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!136 &1106984422
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106984421}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.22516136
+  m_Height: 0.026489537
+  m_Direction: 1
+  m_Center: {x: 0.00042207912, y: 0.005143194, z: -0.019066185}
 --- !u!1 &1106984423
 GameObject:
   m_ObjectHideFlags: 0
@@ -12251,6 +12419,7 @@ GameObject:
   - component: {fileID: 1618619823}
   - component: {fileID: 1618619825}
   - component: {fileID: 1618619824}
+  - component: {fileID: 1618619826}
   m_Layer: 10
   m_Name: Monitor2
   m_TagString: Monitor
@@ -12266,7 +12435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618619822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.828, y: -0.09, z: -5.075}
+  m_LocalPosition: {x: -1.082, y: -0.09, z: -4.478}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1345199851}
@@ -12317,6 +12486,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618619822}
   m_Mesh: {fileID: 4300022, guid: eda073de62a6d1243873507b1bffeaac, type: 3}
+--- !u!136 &1618619826
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618619822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 0.49200004
+  m_Direction: 1
+  m_Center: {x: 0.02926142, y: 0.018688463, z: -0.0014301687}
 --- !u!1 &1797018907
 GameObject:
   m_ObjectHideFlags: 0
@@ -12929,6 +13112,18 @@ MonoBehaviour:
   elementoAgarrado: {fileID: 0}
   Agarrado: 0
   Jugador: {fileID: 1929154864}
+  ComponentesComputadora: 
+  Monitor1: {fileID: 1106984291}
+  Raton1: {fileID: 1106984301}
+  Teclado1: {fileID: 1106984421}
+  Monitor2: {fileID: 1618619822}
+  Raton2: {fileID: 461018153}
+  Teclado2: {fileID: 796748863}
+  Monitor3: {fileID: 2041691582}
+  Raton3: {fileID: 453356077}
+  Teclado3: {fileID: 2072020983}
+  ComputadorasHechas: 
+  agarrarComponentes: {fileID: 493696673}
 --- !u!1 &1986718824
 GameObject:
   m_ObjectHideFlags: 0
@@ -13051,6 +13246,7 @@ GameObject:
   - component: {fileID: 2041691583}
   - component: {fileID: 2041691585}
   - component: {fileID: 2041691584}
+  - component: {fileID: 2041691586}
   m_Layer: 11
   m_Name: Monitor3
   m_TagString: Monitor
@@ -13066,7 +13262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041691582}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.828, y: -0.09, z: -3.358}
+  m_LocalPosition: {x: 1.1053, y: -0.09, z: -3.358}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1345199851}
@@ -13117,6 +13313,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041691582}
   m_Mesh: {fileID: 4300022, guid: eda073de62a6d1243873507b1bffeaac, type: 3}
+--- !u!136 &2041691586
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041691582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.3
+  m_Height: 0.49200004
+  m_Direction: 1
+  m_Center: {x: 0.02926142, y: 0.018688463, z: -0.0014301687}
 --- !u!1 &2072020983
 GameObject:
   m_ObjectHideFlags: 0
@@ -13128,6 +13338,7 @@ GameObject:
   - component: {fileID: 2072020984}
   - component: {fileID: 2072020986}
   - component: {fileID: 2072020985}
+  - component: {fileID: 2072020987}
   m_Layer: 11
   m_Name: Teclado3
   m_TagString: Teclado
@@ -13143,7 +13354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072020983}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.484, y: -0.3, z: -3.492}
+  m_LocalPosition: {x: -0.106, y: -0.3, z: -3.492}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1345199851}
@@ -13194,3 +13405,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2072020983}
   m_Mesh: {fileID: 4300072, guid: eda073de62a6d1243873507b1bffeaac, type: 3}
+--- !u!136 &2072020987
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072020983}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.22516136
+  m_Height: 0.026489537
+  m_Direction: 1
+  m_Center: {x: 0.00042207912, y: 0.005143194, z: -0.019066185}

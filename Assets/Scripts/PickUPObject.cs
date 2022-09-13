@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PickUPObject : MonoBehaviour
 {
     public GameObject elementoAgarrado;
     public bool Agarrado = false;
     public GameObject Jugador;
-    [SerializeField] bool[] ComponentesComputadora;
+    [SerializeField] bool[] ComponentesComputadora = {false, false, false, false, false, false, false, false, false, false};
     public GameObject Monitor1;
     public GameObject Raton1;
     public GameObject Teclado1;
@@ -17,6 +18,8 @@ public class PickUPObject : MonoBehaviour
     public GameObject Monitor3;
     public GameObject Raton3;
     public GameObject Teclado3;
+    [SerializeField] bool[] ComputadorasHechas = {false, false, false};
+    public Text agarrarComponentes;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +37,30 @@ public class PickUPObject : MonoBehaviour
             elementoAgarrado.SetActive(true);
             elementoAgarrado = null;
         }
+        if (Monitor1.transform.position == new Vector3(-2.828f, -0.09f, -6.8f) && Raton1.transform.position == new Vector3(-2.457f, -0.29f, -6.49f) && Teclado1.transform.position == new Vector3(-2.484f, -0.3f, -6.776f) && ComponentesComputadora[0] && ComponentesComputadora[1] && ComponentesComputadora[2])
+        {
+            ComputadorasHechas[0] = true;
+        }
+        else
+        {
+            ComputadorasHechas[0] = false;
+        }
+        if (Monitor2.transform.position == new Vector3(-2.828f, -0.09f, -5.075f) && Raton2.transform.position == new Vector3(-2.457f, -0.29f, -4.759f) && Teclado2.transform.position == new Vector3(-2.484f, -0.3f, -5.111f) && ComponentesComputadora[3] && ComponentesComputadora[4] && ComponentesComputadora[5])
+        {
+            ComputadorasHechas[1] = true;
+        }
+        else
+        {
+            ComputadorasHechas[1] = false;
+        }
+        if (Monitor3.transform.position == new Vector3(-2.828f, -0.09f, -3.358f) && Raton3.transform.position == new Vector3(-2.457f, -0.29f, -3.156f) && Teclado3.transform.position == new Vector3(-2.484f, -0.3f, -3.492f) && ComponentesComputadora[6] && ComponentesComputadora[7] && ComponentesComputadora[8])
+        {
+            ComputadorasHechas[2] = true;
+        }
+        else
+        {
+            ComputadorasHechas[2] = false;
+        }
     }
     void OnTriggerStay(Collider other)
     {
@@ -47,6 +74,7 @@ public class PickUPObject : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.T) && other.gameObject.layer == 9)
             {
+                Debug.Log("hehco");
                 if (elementoAgarrado.gameObject.tag == "Monitor" && ComponentesComputadora[0] == false)
                 {
                     ComponentesComputadora[0] = true;
@@ -194,6 +222,17 @@ public class PickUPObject : MonoBehaviour
                 }
 
             }
+        }
+        if (other.gameObject.tag == "Mouse" || other.gameObject.tag == "Teclado" || other.gameObject.tag == "Monitor")
+        {
+            agarrarComponentes.enabled = true;
+        }
+    }
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Mouse" || other.gameObject.tag == "Teclado" || other.gameObject.tag == "Monitor")
+        {
+            agarrarComponentes.enabled = false;
         }
     }
 }
