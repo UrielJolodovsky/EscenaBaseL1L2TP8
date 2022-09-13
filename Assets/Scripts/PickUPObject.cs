@@ -78,6 +78,7 @@ public class PickUPObject : MonoBehaviour
                 if (elementoAgarrado.gameObject.tag == "Monitor" && ComponentesComputadora[0] == false)
                 {
                     ComponentesComputadora[0] = true;
+                    elementoAgarrado.SetActive(true);
                     elementoAgarrado.transform.position = new Vector3(-2.828f, -0.09f, -6.8f);
                     elementoAgarrado = null;
                     Agarrado = false;
@@ -85,6 +86,7 @@ public class PickUPObject : MonoBehaviour
                 else if (elementoAgarrado.gameObject.tag == "Mouse" && ComponentesComputadora[1] == false)
                 {
                     ComponentesComputadora[1] = true;
+                    elementoAgarrado.SetActive(true);
                     elementoAgarrado.transform.position = new Vector3(-2.457f, -0.29f, -6.49f);
                     elementoAgarrado = null;
                     Agarrado = false;
@@ -92,6 +94,7 @@ public class PickUPObject : MonoBehaviour
                 else if (elementoAgarrado.gameObject.tag == "Teclado" && ComponentesComputadora[2] == false)
                 {
                     ComponentesComputadora[2] = true;
+                    elementoAgarrado.SetActive(true);
                     elementoAgarrado.transform.position = new Vector3(-2.484f, -0.3f, -6.776f);
                     elementoAgarrado = null;
                     Agarrado = false;
@@ -102,6 +105,7 @@ public class PickUPObject : MonoBehaviour
                 if (elementoAgarrado.gameObject.tag == "Monitor" && ComponentesComputadora[3] == false)
                 {
                     ComponentesComputadora[3] = true;
+                    elementoAgarrado.SetActive(true);
                     elementoAgarrado.transform.position = new Vector3(-2.828f, -0.09f, -5.075f);
                     elementoAgarrado = null;
                     Agarrado = false;
@@ -109,6 +113,7 @@ public class PickUPObject : MonoBehaviour
                 else if (elementoAgarrado.gameObject.tag == "Mouse" && ComponentesComputadora[4] == false)
                 {
                     ComponentesComputadora[4] = true;
+                    elementoAgarrado.SetActive(true);
                     elementoAgarrado.transform.position = new Vector3(-2.457f, -0.29f, -4.759f);
                     elementoAgarrado = null;
                     Agarrado = false;
@@ -116,6 +121,7 @@ public class PickUPObject : MonoBehaviour
                 else if (elementoAgarrado.gameObject.tag == "Teclado" && ComponentesComputadora[5] == false)
                 {
                     ComponentesComputadora[5] = true;
+                    elementoAgarrado.SetActive(true);
                     elementoAgarrado.transform.position = new Vector3(-2.484f, -0.3f, -5.111f);
                     elementoAgarrado = null;
                     Agarrado = false;
@@ -126,6 +132,7 @@ public class PickUPObject : MonoBehaviour
                 if (elementoAgarrado.gameObject.tag == "Monitor" && ComponentesComputadora[6] == false)
                 {
                     ComponentesComputadora[6] = true;
+                    elementoAgarrado.SetActive(true);
                     elementoAgarrado.transform.position = new Vector3(-2.828f, -0.09f, -3.358f);
                     elementoAgarrado = null;
                     Agarrado = false;
@@ -133,6 +140,7 @@ public class PickUPObject : MonoBehaviour
                 else if (elementoAgarrado.gameObject.tag == "Mouse" && ComponentesComputadora[7] == false)
                 {
                     ComponentesComputadora[7] = true;
+                    elementoAgarrado.SetActive(true);
                     elementoAgarrado.transform.position = new Vector3(-2.457f, -0.29f, -3.156f);
                     elementoAgarrado = null;
                     Agarrado = false;
@@ -140,6 +148,7 @@ public class PickUPObject : MonoBehaviour
                 else if (elementoAgarrado.gameObject.tag == "Teclado" && ComponentesComputadora[8] == false)
                 {
                     ComponentesComputadora[8] = true;
+                    elementoAgarrado.SetActive(true);
                     elementoAgarrado.transform.position = new Vector3(-2.484f, -0.3f, -3.492f);
                     elementoAgarrado = null;
                     Agarrado = false;
