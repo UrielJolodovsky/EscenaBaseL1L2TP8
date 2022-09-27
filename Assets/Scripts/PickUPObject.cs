@@ -8,7 +8,7 @@ public class PickUPObject : MonoBehaviour
     public GameObject elementoAgarrado;
     public bool Agarrado = false;
     public GameObject Jugador;
-    [SerializeField] bool[] ComponentesComputadora = {false, false, false, false, false, false, false, false, false, false};
+    [SerializeField] bool[] ComponentesComputadora = new bool[] {true, true, true, false, false, false, false, false, false, false};
     public GameObject Monitor1;
     public GameObject Raton1;
     public GameObject Teclado1;
@@ -18,8 +18,8 @@ public class PickUPObject : MonoBehaviour
     public GameObject Monitor3;
     public GameObject Raton3;
     public GameObject Teclado3;
-    [SerializeField] bool[] ComputadorasHechas = {false, false, false};
-    public Text agarrarComponentes;
+    [SerializeField] bool[] ComputadorasHechas = new bool[] { false, false, false};
+public Text agarrarComponentes;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +29,7 @@ public class PickUPObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Soltar objecto
+        // Soltar objeto
         if (Agarrado == true && Input.GetKeyDown(KeyCode.P))
         {
             Agarrado = false;
@@ -64,13 +64,15 @@ public class PickUPObject : MonoBehaviour
     }
     void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.E) && Agarrado == false && other.gameObject.tag != "NPC" && other.gameObject.tag != "mesa")
+        if (Input.GetKeyDown(KeyCode.E) && Agarrado == false && other.gameObject.tag != "NPC" && other.gameObject.tag != "MesaEspecial")
         {
             elementoAgarrado = other.gameObject;
             elementoAgarrado.SetActive(false);
+            elementoAgarrado.transform.position = new Vector3(-9999999f, -99999999f, -9999999f);
             Agarrado = true;
+            agarrarComponentes.enabled = false;
         }
-        if (other.gameObject.tag == "mesa" && Agarrado == true)
+        if (other.gameObject.tag == "MesaEspecial" && Agarrado == true)
         {
             if (Input.GetKeyDown(KeyCode.T) && other.gameObject.layer == 9)
             {
@@ -155,7 +157,7 @@ public class PickUPObject : MonoBehaviour
                 }
             }
         }
-        if (other.gameObject.tag == "mesa" && Agarrado == false)
+        if (other.gameObject.tag == "MesaEspecial" && Agarrado == false)
         {
             if (other.gameObject.layer == 9)
             {
@@ -232,7 +234,7 @@ public class PickUPObject : MonoBehaviour
 
             }
         }
-        if (other.gameObject.tag == "Mouse" || other.gameObject.tag == "Teclado" || other.gameObject.tag == "Monitor")
+        if (other.gameObject.tag == "Mouse" || other.gameObject.tag == "Teclado" || other.gameObject.tag == "Monitor" && Agarrado == false)
         {
             agarrarComponentes.enabled = true;
         }
