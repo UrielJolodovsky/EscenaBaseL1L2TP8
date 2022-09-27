@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 38498598}
   m_Layer: 10
   m_Name: MesaLab.001 (1)
-  m_TagString: mesa
+  m_TagString: MesaEspecial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8145,7 +8145,7 @@ GameObject:
   - component: {fileID: 1106984126}
   m_Layer: 9
   m_Name: MesaLab.001
-  m_TagString: mesa
+  m_TagString: MesaEspecial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12678,7 +12678,7 @@ GameObject:
   - component: {fileID: 1840157381}
   m_Layer: 11
   m_Name: MesaLab.001 (2)
-  m_TagString: mesa
+  m_TagString: MesaEspecial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13112,7 +13112,7 @@ MonoBehaviour:
   elementoAgarrado: {fileID: 0}
   Agarrado: 0
   Jugador: {fileID: 1929154864}
-  ComponentesComputadora: 
+  ComponentesComputadora: 0000000000000000
   Monitor1: {fileID: 1106984291}
   Raton1: {fileID: 1106984301}
   Teclado1: {fileID: 1106984421}
@@ -13122,7 +13122,7 @@ MonoBehaviour:
   Monitor3: {fileID: 2041691582}
   Raton3: {fileID: 453356077}
   Teclado3: {fileID: 2072020983}
-  ComputadorasHechas: 
+  ComputadorasHechas: 010000
   agarrarComponentes: {fileID: 493696673}
 --- !u!1 &1986718824
 GameObject:
@@ -13148,7 +13148,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986718824}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17bf5fa1cb601464388c43ee357578dd, type: 3}
   m_Name: 
