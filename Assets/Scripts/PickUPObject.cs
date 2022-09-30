@@ -19,7 +19,16 @@ public class PickUPObject : MonoBehaviour
     public GameObject Raton3;
     public GameObject Teclado3;
     [SerializeField] bool[] ComputadorasHechas = new bool[] { false, false, false};
-public Text agarrarComponentes;
+    public Transform Mouse1Empty;
+    public Transform Monitor1Empty;
+    public Transform Teclado1Empty;
+    public Transform Mouse2Empty;
+    public Transform Monitor2Empty;
+    public Transform Teclado2Empty;
+    public Transform Mouse3Empty;
+    public Transform Monitor3Empty;
+    public Transform Teclado3Empty;
+    public Text agarrarComponentes;
     // Start is called before the first frame update
     void Start()
     {
@@ -80,24 +89,24 @@ public Text agarrarComponentes;
                 if (elementoAgarrado.gameObject.tag == "Monitor" && ComponentesComputadora[0] == false)
                 {
                     ComponentesComputadora[0] = true;
+                    elementoAgarrado.transform.position = Monitor1Empty.position;
                     elementoAgarrado.SetActive(true);
-                    elementoAgarrado.transform.position = new Vector3(-2.828f, -0.09f, -6.8f);
                     elementoAgarrado = null;
                     Agarrado = false;
                 }
                 else if (elementoAgarrado.gameObject.tag == "Mouse" && ComponentesComputadora[1] == false)
                 {
                     ComponentesComputadora[1] = true;
+                    elementoAgarrado.transform.position = Mouse1Empty.position;
                     elementoAgarrado.SetActive(true);
-                    elementoAgarrado.transform.position = new Vector3(-2.457f, -0.29f, -6.49f);
                     elementoAgarrado = null;
                     Agarrado = false;
                 }
                 else if (elementoAgarrado.gameObject.tag == "Teclado" && ComponentesComputadora[2] == false)
                 {
                     ComponentesComputadora[2] = true;
+                    elementoAgarrado.transform.position = Teclado1Empty.position;
                     elementoAgarrado.SetActive(true);
-                    elementoAgarrado.transform.position = new Vector3(-2.484f, -0.3f, -6.776f);
                     elementoAgarrado = null;
                     Agarrado = false;
                 }
@@ -107,24 +116,24 @@ public Text agarrarComponentes;
                 if (elementoAgarrado.gameObject.tag == "Monitor" && ComponentesComputadora[3] == false)
                 {
                     ComponentesComputadora[3] = true;
+                    elementoAgarrado.transform.position = Monitor2Empty.position;
                     elementoAgarrado.SetActive(true);
-                    elementoAgarrado.transform.position = new Vector3(-2.828f, -0.09f, -5.075f);
                     elementoAgarrado = null;
                     Agarrado = false;
                 }
                 else if (elementoAgarrado.gameObject.tag == "Mouse" && ComponentesComputadora[4] == false)
                 {
                     ComponentesComputadora[4] = true;
+                    elementoAgarrado.transform.position = Mouse2Empty.position;
                     elementoAgarrado.SetActive(true);
-                    elementoAgarrado.transform.position = new Vector3(-2.457f, -0.29f, -4.759f);
                     elementoAgarrado = null;
                     Agarrado = false;
                 }
                 else if (elementoAgarrado.gameObject.tag == "Teclado" && ComponentesComputadora[5] == false)
                 {
                     ComponentesComputadora[5] = true;
+                    elementoAgarrado.transform.position = Teclado2Empty.position;
                     elementoAgarrado.SetActive(true);
-                    elementoAgarrado.transform.position = new Vector3(-2.484f, -0.3f, -5.111f);
                     elementoAgarrado = null;
                     Agarrado = false;
                 }
@@ -134,24 +143,24 @@ public Text agarrarComponentes;
                 if (elementoAgarrado.gameObject.tag == "Monitor" && ComponentesComputadora[6] == false)
                 {
                     ComponentesComputadora[6] = true;
+                    elementoAgarrado.transform.position = Monitor3Empty.position;
                     elementoAgarrado.SetActive(true);
-                    elementoAgarrado.transform.position = new Vector3(-2.828f, -0.09f, -3.358f);
                     elementoAgarrado = null;
                     Agarrado = false;
                 }
                 else if (elementoAgarrado.gameObject.tag == "Mouse" && ComponentesComputadora[7] == false)
                 {
                     ComponentesComputadora[7] = true;
+                    elementoAgarrado.transform.position = Mouse3Empty.position;
                     elementoAgarrado.SetActive(true);
-                    elementoAgarrado.transform.position = new Vector3(-2.457f, -0.29f, -3.156f);
                     elementoAgarrado = null;
                     Agarrado = false;
                 }
                 else if (elementoAgarrado.gameObject.tag == "Teclado" && ComponentesComputadora[8] == false)
                 {
                     ComponentesComputadora[8] = true;
+                    elementoAgarrado.transform.position = Teclado3Empty.position;
                     elementoAgarrado.SetActive(true);
-                    elementoAgarrado.transform.position = new Vector3(-2.484f, -0.3f, -3.492f);
                     elementoAgarrado = null;
                     Agarrado = false;
                 }
@@ -175,7 +184,7 @@ public Text agarrarComponentes;
                     elementoAgarrado = Raton1.gameObject;
                     ComponentesComputadora[1] = false;
                 }
-                if (Input.GetKeyDown(KeyCode.T) && ComponentesComputadora[2])
+                if (Input.GetKeyDown(KeyCode.Q) && ComponentesComputadora[2])
                 {
                     Agarrado = true;
                     Teclado1.SetActive(false);
@@ -199,7 +208,7 @@ public Text agarrarComponentes;
                     elementoAgarrado = Raton2.gameObject;
                     ComponentesComputadora[4] = false;
                 }
-                if (Input.GetKeyDown(KeyCode.T) && ComponentesComputadora[5])
+                if (Input.GetKeyDown(KeyCode.Q) && ComponentesComputadora[5])
                 {
                     Agarrado = true;
                     Teclado2.SetActive(false);
@@ -224,7 +233,7 @@ public Text agarrarComponentes;
                     elementoAgarrado = Raton3.gameObject;
                     ComponentesComputadora[7] = false;
                 }
-                if (Input.GetKeyDown(KeyCode.T) && ComponentesComputadora[8])
+                if (Input.GetKeyDown(KeyCode.Q) && ComponentesComputadora[8])
                 {
                     Agarrado = true;
                     Teclado3.SetActive(false);

@@ -14,13 +14,13 @@ public class CollisionsWithNPC : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void OnTriggerEnter(Collider other)
     {
@@ -30,6 +30,16 @@ public class CollisionsWithNPC : MonoBehaviour
             UIElements.SetActive(true);
             NPCDialogue = NPCDialogueScripts.data.dialogueLines;
             ShowNextDialogueLine();
+        }
+    }
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "NPC")
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                ShowNextDialogueLine();
+            }
         }
     }
     void OnTriggerExit(Collider other)
