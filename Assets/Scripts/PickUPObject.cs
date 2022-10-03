@@ -8,7 +8,7 @@ public class PickUPObject : MonoBehaviour
     public GameObject elementoAgarrado;
     public bool Agarrado = false;
     public GameObject Jugador;
-    [SerializeField] bool[] ComponentesComputadora = new bool[] {true, true, true, false, false, false, false, false, false, false};
+    [SerializeField] bool[] ComponentesComputadora = new bool[] {false, false, false, false, false, false, false, false, false, false};
     public GameObject Monitor1;
     public GameObject Raton1;
     public GameObject Teclado1;
@@ -46,7 +46,7 @@ public class PickUPObject : MonoBehaviour
             elementoAgarrado.SetActive(true);
             elementoAgarrado = null;
         }
-        if (Monitor1.transform.position == new Vector3(-2.828f, -0.09f, -6.8f) && Raton1.transform.position == new Vector3(-2.457f, -0.29f, -6.49f) && Teclado1.transform.position == new Vector3(-2.484f, -0.3f, -6.776f) && ComponentesComputadora[0] && ComponentesComputadora[1] && ComponentesComputadora[2])
+        if (Monitor1.transform.position == Monitor1Empty.position && Raton1.transform.position == Mouse1Empty.position && Teclado1.transform.position == Teclado1Empty.position && ComponentesComputadora[0] && ComponentesComputadora[1] && ComponentesComputadora[2])
         {
             ComputadorasHechas[0] = true;
         }
@@ -54,7 +54,7 @@ public class PickUPObject : MonoBehaviour
         {
             ComputadorasHechas[0] = false;
         }
-        if (Monitor2.transform.position == new Vector3(-2.828f, -0.09f, -5.075f) && Raton2.transform.position == new Vector3(-2.457f, -0.29f, -4.759f) && Teclado2.transform.position == new Vector3(-2.484f, -0.3f, -5.111f) && ComponentesComputadora[3] && ComponentesComputadora[4] && ComponentesComputadora[5])
+        if (Monitor2.transform.position == Monitor2Empty.position && Raton2.transform.position == Mouse2Empty.position && Teclado2.transform.position == Teclado2Empty.position && ComponentesComputadora[3] && ComponentesComputadora[4] && ComponentesComputadora[5])
         {
             ComputadorasHechas[1] = true;
         }
@@ -62,7 +62,7 @@ public class PickUPObject : MonoBehaviour
         {
             ComputadorasHechas[1] = false;
         }
-        if (Monitor3.transform.position == new Vector3(-2.828f, -0.09f, -3.358f) && Raton3.transform.position == new Vector3(-2.457f, -0.29f, -3.156f) && Teclado3.transform.position == new Vector3(-2.484f, -0.3f, -3.492f) && ComponentesComputadora[6] && ComponentesComputadora[7] && ComponentesComputadora[8])
+        if (Monitor3.transform.position == Monitor3Empty.position && Raton3.transform.position == Mouse3Empty.position && Teclado3.transform.position == Teclado3Empty.position && ComponentesComputadora[6] && ComponentesComputadora[7] && ComponentesComputadora[8])
         {
             ComputadorasHechas[2] = true;
         }
@@ -70,10 +70,14 @@ public class PickUPObject : MonoBehaviour
         {
             ComputadorasHechas[2] = false;
         }
+        if (ComputadorasHechas[0] && ComputadorasHechas[1] && ComputadorasHechas[2])
+        {
+
+        }
     }
     void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.E) && Agarrado == false && other.gameObject.tag != "NPC" && other.gameObject.tag != "MesaEspecial")
+        if (Input.GetKeyDown(KeyCode.E) && Agarrado == false && other.gameObject.tag != "NPC" && other.gameObject.tag != "MesaEspecial" && other.transform.position != Monitor1Empty.position && other.transform.position != Monitor2Empty.position && other.transform.position != Monitor3Empty.position && other.transform.position != Teclado1Empty.position && other.transform.position != Teclado2Empty.position && other.transform.position != Teclado3Empty.position && other.transform.position != Mouse1Empty.position && other.transform.position != Mouse2Empty.position && other.transform.position != Mouse3Empty.position)
         {
             elementoAgarrado = other.gameObject;
             elementoAgarrado.SetActive(false);
