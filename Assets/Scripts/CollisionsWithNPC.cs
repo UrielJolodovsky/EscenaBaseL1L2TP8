@@ -11,6 +11,7 @@ public class CollisionsWithNPC : MonoBehaviour
     [SerializeField] string[] NPCDialogue;
     [SerializeField] NPCDialogue NPCDialogueScripts;
     int dialogueIndex = 0;
+    public Text continuar;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,14 @@ public class CollisionsWithNPC : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (dialogueIndex < NPCDialogue.Length)
+        {
+            continuar.enabled = true;
+        }
+        else
+        {
+            continuar.enabled = false;
+        }
     }
     void OnTriggerEnter(Collider other)
     {

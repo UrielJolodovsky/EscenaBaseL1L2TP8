@@ -29,6 +29,7 @@ public class PickUPObject : MonoBehaviour
     public Transform Monitor3Empty;
     public Transform Teclado3Empty;
     public Text agarrarComponentes;
+    public Text agarrarObjetosCompu;
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +78,10 @@ public class PickUPObject : MonoBehaviour
     }
     void OnTriggerStay(Collider other)
     {
+        if (other.gameObject.tag == "MesaEspecial")
+        {
+            agarrarObjetosCompu.enabled = true;
+        }
         if (Input.GetKeyDown(KeyCode.E) && Agarrado == false && other.gameObject.tag != "NPC" && other.gameObject.tag != "MesaEspecial" && other.transform.position != Monitor1Empty.position && other.transform.position != Monitor2Empty.position && other.transform.position != Monitor3Empty.position && other.transform.position != Teclado1Empty.position && other.transform.position != Teclado2Empty.position && other.transform.position != Teclado3Empty.position && other.transform.position != Mouse1Empty.position && other.transform.position != Mouse2Empty.position && other.transform.position != Mouse3Empty.position)
         {
             elementoAgarrado = other.gameObject;
@@ -257,6 +262,10 @@ public class PickUPObject : MonoBehaviour
         if (other.gameObject.tag == "Mouse" || other.gameObject.tag == "Teclado" || other.gameObject.tag == "Monitor")
         {
             agarrarComponentes.enabled = false;
+        }
+        if (other.gameObject.tag == "MesaEspecial")
+        {
+            agarrarObjetosCompu.enabled = false;
         }
     }
 }
