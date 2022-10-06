@@ -12,6 +12,8 @@ public class CollisionsWithNPC : MonoBehaviour
     [SerializeField] NPCDialogue NPCDialogueScripts;
     int dialogueIndex = 0;
     public Text continuar;
+    bool entrar;
+    [SerializeField] string tagTrigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,25 +31,22 @@ public class CollisionsWithNPC : MonoBehaviour
         {
             continuar.enabled = false;
         }
+        if (Input.GetKeyDown(KeyCode.E) && entrar && tagTrigger == "NPC")
+        {
+            ShowNextDialogueLine();
+        }
     }
     void OnTriggerEnter(Collider other)
     {
+
+        entrar = true;
+        tagTrigger = other.gameObject.tag;
         NPCDialogueScripts = other.gameObject.GetComponent<NPCDialogue>();
         if (NPCDialogueScripts)
         {
             UIElements.SetActive(true);
             NPCDialogue = NPCDialogueScripts.data.dialogueLines;
             ShowNextDialogueLine();
-        }
-    }
-    void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "NPC")
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                ShowNextDialogueLine();
-            }
         }
     }
     void OnTriggerExit(Collider other)
@@ -57,6 +56,8 @@ public class CollisionsWithNPC : MonoBehaviour
             UIElements.SetActive(false);
             dialogueIndex = 0;
         }
+        entrar = false;
+        tagTrigger = "";
     }
     public void ShowNextDialogueLine()
     {

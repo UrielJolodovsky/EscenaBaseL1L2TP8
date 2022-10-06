@@ -31,6 +31,9 @@ public class PickUPObject : MonoBehaviour
     public Text agarrarComponentes;
     public Text agarrarObjetosCompu;
     public Text ganaste;
+    [SerializeField] string tagTrigger = "";
+    [SerializeField] int layerTrigger;
+    [SerializeField] GameObject colisionConFPS;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,50 +54,67 @@ public class PickUPObject : MonoBehaviour
         if (Monitor1.transform.position == Monitor1Empty.position && Raton1.transform.position == Mouse1Empty.position && Teclado1.transform.position == Teclado1Empty.position && ComponentesComputadora[0] && ComponentesComputadora[1] && ComponentesComputadora[2])
         {
             ComputadorasHechas[0] = true;
+            Monitor1.GetComponent<Renderer>().material.color = Color.yellow;
+            Teclado1.GetComponent<Renderer>().material.color = Color.yellow;
+            Raton1.GetComponent<Renderer>().material.color = Color.yellow;
         }
         else
         {
             ComputadorasHechas[0] = false;
+            Monitor1.GetComponent<Renderer>().material.color = Color.red;
+            Teclado1.GetComponent<Renderer>().material.color = Color.green;
+            Raton1.GetComponent<Renderer>().material.color = Color.blue;
         }
         if (Monitor2.transform.position == Monitor2Empty.position && Raton2.transform.position == Mouse2Empty.position && Teclado2.transform.position == Teclado2Empty.position && ComponentesComputadora[3] && ComponentesComputadora[4] && ComponentesComputadora[5])
         {
             ComputadorasHechas[1] = true;
+            Monitor2.GetComponent<Renderer>().material.color = Color.yellow;
+            Teclado2.GetComponent<Renderer>().material.color = Color.yellow;
+            Raton2.GetComponent<Renderer>().material.color = Color.yellow;
         }
         else
         {
             ComputadorasHechas[1] = false;
+            Monitor2.GetComponent<Renderer>().material.color = Color.green;
+            Teclado2.GetComponent<Renderer>().material.color = Color.blue;
+            Raton2.GetComponent<Renderer>().material.color = Color.red;
         }
         if (Monitor3.transform.position == Monitor3Empty.position && Raton3.transform.position == Mouse3Empty.position && Teclado3.transform.position == Teclado3Empty.position && ComponentesComputadora[6] && ComponentesComputadora[7] && ComponentesComputadora[8])
         {
             ComputadorasHechas[2] = true;
+            Monitor3.GetComponent<Renderer>().material.color = Color.yellow;
+            Teclado3.GetComponent<Renderer>().material.color = Color.yellow;
+            Raton3.GetComponent<Renderer>().material.color = Color.yellow;
         }
         else
         {
             ComputadorasHechas[2] = false;
+            Monitor3.GetComponent<Renderer>().material.color = Color.blue;
+            Teclado3.GetComponent<Renderer>().material.color = Color.red;
+            Raton3.GetComponent<Renderer>().material.color = Color.green;
         }
         if (ComputadorasHechas[0] && ComputadorasHechas[1] && ComputadorasHechas[2])
         {
+            agarrarComponentes.enabled = false;
+            agarrarObjetosCompu.enabled = false;
             Time.timeScale = 0;
             ganaste.enabled = true;
         }
-    }
-    void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "MesaEspecial")
+        if (tagTrigger == "MesaEspecial")
         {
             agarrarObjetosCompu.enabled = true;
         }
-        if (Input.GetKeyDown(KeyCode.E) && Agarrado == false && other.gameObject.tag != "NPC" && other.gameObject.tag != "MesaEspecial" && other.transform.position != Monitor1Empty.position && other.transform.position != Monitor2Empty.position && other.transform.position != Monitor3Empty.position && other.transform.position != Teclado1Empty.position && other.transform.position != Teclado2Empty.position && other.transform.position != Teclado3Empty.position && other.transform.position != Mouse1Empty.position && other.transform.position != Mouse2Empty.position && other.transform.position != Mouse3Empty.position)
+        if (Input.GetKeyDown(KeyCode.E) && Agarrado == false && tagTrigger != "NPC" && tagTrigger != "MesaEspecial" && tagTrigger!= "" && colisionConFPS.transform.position != Monitor1Empty.position && colisionConFPS.transform.position != Monitor2Empty.position && colisionConFPS.transform.position != Monitor3Empty.position && colisionConFPS.transform.position != Teclado1Empty.position && colisionConFPS.transform.position != Teclado2Empty.position && colisionConFPS.transform.position != Teclado3Empty.position && colisionConFPS.transform.position != Mouse1Empty.position && colisionConFPS.transform.position != Mouse2Empty.position && colisionConFPS.transform.position != Mouse3Empty.position)
         {
-            elementoAgarrado = other.gameObject;
+            elementoAgarrado = colisionConFPS.gameObject;
             elementoAgarrado.SetActive(false);
             elementoAgarrado.transform.position = new Vector3(-9999999f, -99999999f, -9999999f);
             Agarrado = true;
             agarrarComponentes.enabled = false;
         }
-        if (other.gameObject.tag == "MesaEspecial" && Agarrado == true)
+        if (tagTrigger == "MesaEspecial" && Agarrado == true)
         {
-            if (Input.GetKeyDown(KeyCode.T) && other.gameObject.layer == 9)
+            if (Input.GetKeyDown(KeyCode.T) && layerTrigger == 9)
             {
                 Debug.Log("hehco");
                 if (elementoAgarrado.gameObject.tag == "Monitor" && ComponentesComputadora[0] == false)
@@ -122,7 +142,7 @@ public class PickUPObject : MonoBehaviour
                     Agarrado = false;
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.T) && other.gameObject.layer == 10)
+            else if (Input.GetKeyDown(KeyCode.T) && layerTrigger == 10)
             {
                 if (elementoAgarrado.gameObject.tag == "Monitor" && ComponentesComputadora[3] == false)
                 {
@@ -149,7 +169,7 @@ public class PickUPObject : MonoBehaviour
                     Agarrado = false;
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.T) && other.gameObject.layer == 11)
+            else if (Input.GetKeyDown(KeyCode.T) && layerTrigger == 11)
             {
                 if (elementoAgarrado.gameObject.tag == "Monitor" && ComponentesComputadora[6] == false)
                 {
@@ -177,9 +197,9 @@ public class PickUPObject : MonoBehaviour
                 }
             }
         }
-        if (other.gameObject.tag == "MesaEspecial" && Agarrado == false)
+        if (tagTrigger == "MesaEspecial" && Agarrado == false)
         {
-            if (other.gameObject.layer == 9)
+            if (layerTrigger == 9)
             {
                 if (Input.GetKeyDown(KeyCode.M) && ComponentesComputadora[0])
                 {
@@ -203,7 +223,7 @@ public class PickUPObject : MonoBehaviour
                     ComponentesComputadora[2] = false;
                 }
             }
-            else if (other.gameObject.layer == 10)
+            else if (layerTrigger == 10)
             {
                 if (Input.GetKeyDown(KeyCode.M) && ComponentesComputadora[3])
                 {
@@ -228,7 +248,7 @@ public class PickUPObject : MonoBehaviour
                 }
 
             }
-            else if (other.gameObject.layer == 11)
+            else if (layerTrigger == 11)
             {
                 if (Input.GetKeyDown(KeyCode.M) && ComponentesComputadora[6])
                 {
@@ -254,10 +274,16 @@ public class PickUPObject : MonoBehaviour
 
             }
         }
-        if (other.gameObject.tag == "Mouse" || other.gameObject.tag == "Teclado" || other.gameObject.tag == "Monitor" && Agarrado == false)
+        if (tagTrigger == "Mouse" || tagTrigger == "Teclado" || tagTrigger == "Monitor" && Agarrado == false)
         {
             agarrarComponentes.enabled = true;
         }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        tagTrigger = other.gameObject.tag;
+        layerTrigger = other.gameObject.layer;
+        colisionConFPS = other.gameObject;
     }
     void OnTriggerExit(Collider other)
     {
@@ -269,5 +295,7 @@ public class PickUPObject : MonoBehaviour
         {
             agarrarObjetosCompu.enabled = false;
         }
+        tagTrigger = "";
+        layerTrigger = 0;
     }
 }
