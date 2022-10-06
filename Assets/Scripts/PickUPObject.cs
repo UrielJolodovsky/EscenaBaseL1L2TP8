@@ -30,6 +30,7 @@ public class PickUPObject : MonoBehaviour
     public Transform Teclado3Empty;
     public Text agarrarComponentes;
     public Text agarrarObjetosCompu;
+    public Text ganaste;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,7 +74,8 @@ public class PickUPObject : MonoBehaviour
         }
         if (ComputadorasHechas[0] && ComputadorasHechas[1] && ComputadorasHechas[2])
         {
-
+            Time.timeScale = 0;
+            ganaste.enabled = true;
         }
     }
     void OnTriggerStay(Collider other)
